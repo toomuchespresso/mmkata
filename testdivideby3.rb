@@ -1,4 +1,4 @@
-require "minitest/autorun"
+require "minitest/autorun"	
 require_relative "divideby3.rb"
 class My_test < Minitest::Test
 
@@ -33,10 +33,24 @@ class My_test < Minitest::Test
 
    end 
 
-   def test_15_returns_minedmines
+   def test_3_returns_mmkata
+    	results = mmkata(3)
+    	assert_equal("mined",results)
+    end
 
-   	results = mmkata(15)
-   	assert_equal("minedminds",results)
+   def test_15_returns_mmkata()
+    
+    results = mmkata(15)
+   	assert_equal("minedminds", results)
+
    end
+
+   def test_30_returns_mmkata()
+   	 
+   	  results = mmkata(30)
+   	  assert_equal("minedminds", results)
+   	end
+     
+    
 
  end  
